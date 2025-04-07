@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --pure-white: #ffffff;
+  --primary: #008080;
+  --secondary: #e9fffb;
+
+  --title-fontSize: 24px;
+  --description-fontSize: 18px;
+  --text-white: #ffffff;
+  --links-offwhite: #F3F3F3;
+  --title-color: #262626;
+  --description-color: #333333;
+}
+
+body {
+  background: var(--pure-white);
+  color: var(--primary);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* buttons */
+
+.secondary-button {
+
+  font-family: Urbanist;
+  color: var(--title-color);
+  font-weight: 600 !important;
+  font-size: 18px;
+  line-height: 150%;
+  padding: 14px 24px;
+  border-width: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #008080 ;
+  letter-spacing: 0;
+  transition: all 0.25s linear;
+  background: #E9FFFB;
+}  
+.secondary-button:hover{
+  color: #F3F3F3;
+  background: #8CD6CF;
+  border: 1px solid #7BBCB0
+}
+
+.upbutton{
+  width: 52px;
+  height: 52px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color:#E9FFFB33;
+  border-radius: 50%;
+
+}
