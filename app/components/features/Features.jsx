@@ -1,7 +1,7 @@
-import React from "react";
 import FeatureCard from "../FeatureCard";
 
 const Features = () => {
+
   const featureCardsData = [
     {
       svg: "/assets/img/features/card1.svg",

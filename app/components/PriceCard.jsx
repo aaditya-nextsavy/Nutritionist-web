@@ -8,7 +8,7 @@ const PriceCard = ({
   type,
 }) => {
   return (
-    <div className="feature-card">
+    <div className="price-card">
       <div className="price-card-header">
         <h3>{title}</h3>
         <span className="discount">{discount}</span>
