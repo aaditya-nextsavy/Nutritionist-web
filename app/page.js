@@ -6,7 +6,7 @@ export const metadata = {
 export default function Home() {
   return (
     
-      <div className="container text-center">
+      <div className="container text-center h-[100vh]">
          <h1>home</h1>
       </div>
      

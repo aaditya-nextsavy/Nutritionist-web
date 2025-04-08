@@ -1,5 +1,9 @@
+'use client'
 import Link from "next/link";
 import Image from "next/image";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoCall } from "react-icons/io5";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -27,7 +31,9 @@ const Footer = () => {
               <Link href="/contact-us">Contact us</Link>
             </nav>
           </div>
-          <div className="go-to-top-btn">
+          <div className="go-to-top-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <p>Got To Top</p>
             <div className="upbutton">
               <Image
@@ -42,9 +48,25 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-contacts">
-            <p>hello@nutritionist.com</p>
-            <p>+91 91813 23 2309</p>
-            <p>Marina Del Rey, California, USA</p>
+            <p>
+              <Link href="mailto:hello@nutritionist.com">
+                <MdOutlineEmail /> hello@nutritionist.com
+              </Link>
+            </p>
+            <p>
+              <Link href="tel:+9191813232309">
+                <IoCall /> +91 91813 23 2309
+              </Link>
+            </p>
+            <p>
+              <Link
+                href="https://www.google.com/maps?q=Marina+Del+Rey,+California,+USA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLocationDot /> Marina Del Rey, California, USA
+              </Link>
+            </p>
           </div>
           <div className="footer-privacy_policy">
             <p>© 2025 Nutritionist. All rights reserved.</p>
