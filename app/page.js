@@ -1,5 +1,7 @@
 import HeroBanner from "./components/heroBanner/HeroBanner";
 import Features from "./components/features/Features";
+import Pricing from "./components/pricing/Pricing";
+
 export const metadata = {
   title: "Home | Nutritionist",
   description:
@@ -18,6 +20,13 @@ export default function Home() {
           <Features />
         </div>
       </section>
+
+      <section className="pricing-section-wrapper">
+        <div className="container">
+          <Pricing />
+        </div>
+      </section>
+
     </main>
   );
 }

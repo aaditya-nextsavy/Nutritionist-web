@@ -31,17 +31,18 @@ main {
   content: "";
   position: absolute;
   top: 0px;
-  background-size: cover;
-  width: 244px;
+  background-size: contain;
+  width: 200px;
   background-repeat: no-repeat;
-  height: 59px;
+  height: 100px;
+  background-position: top;
 }
 .newsfeed::before {
-  left: 40px;
+  left: 3%;
   background-image: url("../img/header_left.svg");
 }
 .newsfeed::after {
-  right: 40px;
+  right: 3%;
   background-image: url("../img/header_right.svg");
 }
 .newsfeed-information {
@@ -205,6 +206,8 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-position: center;
+  background-repeat: repeat;
   background-image: url(../img/heroBanner/grid.png);
 }
 .hero-image {
@@ -258,15 +261,16 @@ footer {
   font-size: clamp(28px, 5vw, 48px);
   color: #262626;
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
 }
-.section-description p, .feature-card-description p {
+.section-description p,
+.feature-card-description p {
   color: #333333;
   font-weight: 500;
   font-size: clamp(14px, 2.5vw, 18px);
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 .hero-buttons {
   margin-top: 30px;
@@ -275,7 +279,6 @@ footer {
 }
 
 /* user joined */
-
 .user-joined-wrapper {
   display: flex;
   align-items: center;
@@ -284,7 +287,7 @@ footer {
 .user-joined-images {
   display: flex;
   margin-right: 8px;
-  padding: 8px 10px;
+  padding: 8px 10px 7px;
   border-radius: 58px;
   border: 1px solid #008080;
 }
@@ -324,16 +327,24 @@ footer {
 }
 
 /* Features */
-.features-section-wrapper {
+.features-section-wrapper,
+.pricing-section-wrapper {
   height: 100%;
 }
-.features-wrapper {
+.features-wrapper,
+.pricing-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: clamp(50px, 4vw, 80px);
 }
-.features-head {
+.features-head,
+.pricing-head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10%;
 }
 
 .features-cards-wrapper {
@@ -356,6 +367,7 @@ footer {
 .feature-card:hover {
   border: 1px solid #7bbcb0;
 }
+
 .feature-card-title {
   display: flex;
   align-items: center;
@@ -366,7 +378,7 @@ footer {
   border-radius: 8px;
   background-color: #008080;
 }
-.feature-card-title .icon img{
+.feature-card-title .icon img {
   width: 35px;
   height: 35px;
 }
@@ -379,6 +391,100 @@ footer {
   vertical-align: middle;
 }
 
+/* pricing */
+.pricing-section-wrapper{
+  margin-bottom: 100px;
+}
+.subscription-buttons-box-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 14px;
+}
+
+.subscription-buttons-box-wrapper p {
+  color: #4c4c4d;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.subscription-buttons-box {
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #7bbcb0b2;
+}
+.subscription-buttons-box button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #4c4c4c;
+  transition: all 0.3s linear;
+  padding: 10px 24px;
+  border-radius: 6px;
+  background: #ffffff;
+}
+.subscription-buttons-box .activePrice {
+  padding: 10px 24px;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #008080;
+}
+
+.price-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.price-card {
+  width: 100%;
+  padding: clamp(30px, 3vw, 50px);
+  background: #e9fffb;
+  border: 1px solid #7bbcb0b2;
+  border-radius: 12px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.price-card:hover {
+  border: 1px solid #7bbcb0;
+}
+.price-card-header h3 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #262626;
+}
+.price-card-header span {
+  color: #4c4c4d;
+}
+
+.feature-card .price-info p {
+  color: #333333;
+  align-items: center;
+  font-weight: 500;
+  display: flex;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+.feature-card .price-info p span {
+  color: #7bbcb0;
+  font-weight: 700;
+  font-size: 50px;
+  margin-right: 4px;
+  line-height: 88%;
+  letter-spacing: 0;
+}
 @media (max-width: 780px) {
   .features-cards-wrapper {
     display: grid;
@@ -451,10 +557,4 @@ footer {
     width: 14px;
     height: 16px;
   }
-
-
-
-
 }
-
-
